@@ -1,0 +1,45 @@
+<% include _header %>
+
+<style>
+body{
+    background: url(https://iphoneroscdn-iphoneros.netdna-ssl.com/wp-content/uploads/2017/07/iMacPro_iPhoneros_escritorio.jpg);
+}
+html,body{
+    background-repeat:no-repeat; 
+    background-position:center;
+    position: relative;
+    width:100%;
+    background-size:100% 100%;
+}
+</style>
+
+<a href="/cel" class="btn btn-danger pull-right">Registrar nuevo celular</a>
+<br>
+<br>
+<br>
+<% cel.forEach((e) => {%>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <%if (e.Nombre) {%>   
+            <h3>Celular: <%= e.Nombre%></h3>
+            <% } else {%>
+            <h3>Sin nombre</h3>
+            <% } %>
+        </div>
+
+        <div class="panel-body">
+            <h4>Color: <%= e.Color %> </h4>
+            <h4>Tamaño de la pantalla: <%= e.TamPantalla %></h4>
+            <h4>Pixeles de la camara: <%= e.CamaraPixeles %></h4>
+            <h4>Capacidad de la memoria: <%= e.Capacidad %></h4>
+            <h4>Especificaciones: <%= e.Especificaciones %></h4>
+            <% var source = "/uploads/myImage-" %>
+            <% source += e.ID %>
+            <% source += ".png" %> 
+            <img src='<%= source %>' style="width 120px; height: 120px;">
+     
+        </div>
+    </div>
+
+<% }) %>
+<% include _footer %>

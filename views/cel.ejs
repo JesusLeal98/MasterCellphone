@@ -1,0 +1,51 @@
+<% include _header %>
+
+<style>
+body{
+    background: url(https://iphoneroscdn-iphoneros.netdna-ssl.com/wp-content/uploads/2017/07/iMacPro_iPhoneros_escritorio.jpg);
+}
+html,body{
+    background-repeat:no-repeat; 
+    background-position:center;
+    position: relative;
+    width:100%;
+    background-size:100% 100%;
+}
+</style>
+
+<h1>Registro</h1>
+
+<form action="/cel" method="post" enctype="multipart/form-data">
+<div class="form-group">
+    <input name="Nombre" type="text" class="form-control"
+    placeholder="Escribe el nombre del celular" required autofocus/>
+</div>
+<div class="form-group">
+    <input name="Color" type="text" class="form-control"
+    placeholder="Color del celular" required/>
+</div>
+<div class="form-group">
+    <input name="TamPantalla" type="text" class="form-control"
+    placeholder="Tamaño de la pantalla" required/>
+</div>
+<div class="form-group">
+    <input name="CamaraPixeles" type="text" class="form-control"
+    placeholder="Pixeles de la camara" required/>
+</div>
+<div class="form-group">
+    <input name="Capacidad" type="text" class="form-control"
+    placeholder="Capacidad de memoria del celular" required/>
+</div>
+<div class="form-group">
+    <input name="Especificaciones" type="text" class="form-control"
+    placeholder="Escribe mas especificaciones" required/>
+</div>
+<h1> <%= typeof msg != 'undefined' ? msg : '' %></h1>
+<label class="btn btn-default btn-block">Subir la foto del celular
+<input name="myImage" type="file" hidden>
+</label>
+
+<input type="submit" value="Agregar" class="btn btn-danger btn-block"/>
+</form>
+
+<% include _footer %>

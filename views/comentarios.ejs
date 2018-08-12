@@ -1,0 +1,36 @@
+<% include _header %>
+
+<style>
+body{
+    background: url(https://iphoneroscdn-iphoneros.netdna-ssl.com/wp-content/uploads/2017/07/iMacPro_iPhoneros_escritorio.jpg);
+}
+html,body{
+    background-repeat:no-repeat; 
+    background-position:center;
+    position: relative;
+    width:100%;
+    background-size:100% 100%;
+}
+</style>
+
+<a href="/com" class="btn btn-danger pull-right">Registrar un nuevo comentario</a>
+<br>
+<br>
+<br>
+<% com.forEach((e) => {%>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <%if (e.Tipo) {%>   
+            <h3>Tipo de comentario: <%= e.Tipo%></h3>
+            <% } else {%>
+            <h3>Sin tipo de comentario</h3>
+            <% } %>
+        </div>
+
+        <div class="panel-body">
+            <h4>Comentario: <%= e.Comentario %> </h4>
+        </div>
+    </div>
+
+<% }) %>
+<% include _footer %>

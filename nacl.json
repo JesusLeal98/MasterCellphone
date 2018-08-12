@@ -1,0 +1,100 @@
+[{
+    "group": "Usuario-comun",
+    "permissions":
+    [{
+        "resource": "/login",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/edit",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/dispositivos",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/usuarios/*",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/usuarios",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/comentarios",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/logout",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/signup",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/cel",
+        "methods": ["GET", "POST"],
+        "action": "deny"
+    },
+    {
+        "resource": "/com",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    }
+    ]
+},
+{"group": "Administrador",
+    "permissions":
+    [{
+        "resource": "/*",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    }
+    ]
+},
+{
+"group": "invitado",
+    "permissions":
+    [{
+        "resource": "/login",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/edit",
+        "methods": ["GET", "POST"],
+        "action": "deny"
+    },
+    {
+        "resource": "/logout",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/signup",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/cel",
+        "methods": ["GET", "POST"],
+        "action": "deny"
+    },
+    {
+        "resource": "/com",
+        "methods": ["GET", "POST"],
+        "action": "deny"
+    }
+    ]
+}
+]

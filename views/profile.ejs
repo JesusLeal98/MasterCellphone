@@ -1,0 +1,36 @@
+<% include _header %>
+
+<style>
+body{
+    background: url(https://iphoneroscdn-iphoneros.netdna-ssl.com/wp-content/uploads/2017/07/iMacPro_iPhoneros_escritorio.jpg);
+}
+html,body{
+    background-repeat:no-repeat; 
+    background-position:center;
+    position: relative;
+    width:100%;
+    height:100%;
+    background-size:100% 100%;
+}
+</style>
+
+<% if ((currentUsuario) && (currentUsuario.id  === usuario.id)) { %>
+<a href="/edit" class="btn btn-danger pull-right">Edita tu perfil</a>
+<% } %>
+
+<br>
+<br>
+<br>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h1><%= usuario.name() %></h1>
+</div>
+
+<div class="panel-body">
+<% if(usuario.bio) { %>
+    <p><%= usuario.bio %></p>
+<% } %>
+</div>
+</div>
+
+<% include _footer %>
